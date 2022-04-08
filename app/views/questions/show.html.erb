@@ -45,9 +45,13 @@
       <%= answer.body %>
     </p>
 
-    <%= button_to "Delete", question_answer_path(@question, answer),
+    <%= link_to "Edit", edit_question_answer_path(@question, answer),
+      class: "btn btn-secondary btn-sm" %>
+
+    <%= button_to "Destroy", question_answer_path(@question, answer),
       class: "btn btn-danger btn-sm",
       method: :delete, form: { data: { turbo_confirm: 'Are you sure?' } } %>
+
 
     <hr class="my-3">
   </article>
