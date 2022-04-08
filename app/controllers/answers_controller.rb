@@ -19,6 +19,20 @@ class AnswersController < ApplicationController
     redirect_to question_path(@question)
   end
 
+  def edit
+    @answer = @question.answers.find params[:id]
+  end
+
+  def update
+    @answer = @question.answers.find params[:id]
+    if @answer.update answer_params
+      flash[:success] = "Answer updated!"
+      redirect_to question_path @question
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def answer_params
