@@ -19,15 +19,13 @@
 
 <h4>Write your answer</h4>
 
-<%= render "shared/errors", object: @answer %>
-
 <%= render 'answers/form' %>
 
 <h3 class="mt-5">Answers</h3>
 
-<%= paginate @answers %>
+<%== pagy_bootstrap_nav(@pagy) if @pagy.pages > 1 %>
 
 <%= render partial: 'answers/answer', collection: @answers,
   as: :answer, locals: {question: @question} %>
 
-<%= paginate @answers %>
+<%== pagy_bootstrap_nav(@pagy) if @pagy.pages > 1 %>
