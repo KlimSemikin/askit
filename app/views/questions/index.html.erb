@@ -1,3 +1,6 @@
+<% provide :page_title, "Questions" %>
+<% currently_at "Questions" %>
+
 <h2 class="mb-4">Questions</h2>
 
 <%= link_to "New question", new_question_path, class: "btn btn-primary btn-lg" %>
@@ -23,4 +26,5 @@
         method: :delete, form: { data: { turbo_confirm: 'Are you sure?' } } %>
     </div>
   </article>
+
 <% end %>
