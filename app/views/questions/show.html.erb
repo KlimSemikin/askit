@@ -25,5 +25,9 @@
 
 <h3 class="mt-5">Answers</h3>
 
+<%= paginate @answers %>
+
 <%= render partial: 'answers/answer', collection: @answers,
   as: :answer, locals: {question: @question} %>
+
+<%= paginate @answers %>
