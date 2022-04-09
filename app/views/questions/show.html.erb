@@ -7,9 +7,9 @@
   <%= @question.formatted_created_at %>
 </time>
 
-<p class="lead my-3">
-  <%= @question.body %>
-</p>
+<div class="lead my-3">
+  <%= sanitize @question.body %>
+</div>
 
 <%= link_to "Edit", edit_question_path(@question), class: "btn btn-secondary" %>
 <%= button_to "Destroy", question_path(@question), class: "btn btn-danger",
@@ -37,27 +37,5 @@
 
 <h3 class="mt-5">Answers</h3>
 
-<% @answers.each do |answer| %>
-  <article class="mb-3 card">
-    <div class="card-body">
-      <section class="card-text">
-        <small>
-          <time datetime="<% answer.formatted_created_at %>">
-            <%= answer.formatted_created_at %>
-          </time>
-        </small>
-
-        <p>
-          <%= answer.body %>
-        </p>
-      </section>
-
-    <%= link_to "Edit", edit_question_answer_path(@question, answer),
-      class: "btn btn-secondary btn-sm" %>
-    <%= button_to "Destroy", question_answer_path(@question, answer),
-      class: "btn btn-danger btn-sm",
-      method: :delete, form: { data: { turbo_confirm: 'Are you sure?' } } %>
-
-    </div>
-  </article>
-<% end %>
+<%= render partial: 'answers/answer', collection: @answers,
+  as: :answer, locals: {question: @question} %>
