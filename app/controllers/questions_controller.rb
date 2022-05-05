@@ -31,6 +31,7 @@ class QuestionsController < ApplicationController
   def show
     @answer = @question.answers.build
     @pagy, @answers = pagy @question.answers.order(created_at: :desc)
+    @answers = @answers.decorate
   end
 
   def update
