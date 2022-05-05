@@ -77,3 +77,5 @@ group :test do
 end
 
 gem "pagy", "~> 5.10"
+
+gem "draper", "~> 4.0"

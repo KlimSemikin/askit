@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
-      flash[:success] = "Welcome to the app, #{@user.name}!"
+      flash[:success] = "Welcome to the app, #{@user.name_or_email}!"
       redirect_to questions_path
     else
       render :new, status: :unprocessable_entity
