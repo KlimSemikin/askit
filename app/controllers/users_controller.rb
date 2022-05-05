@@ -7,8 +7,8 @@ class UsersController < ApplicationController
     @user = User.new user_params
 
     if @user.save
-      session[:user_id] = @user.id
-      flash[:success] = "Welcome to the app, #{@user.name_or_email}!"
+      sign_in @user
+      flash[:success] = "Welcome to the app, #{current_user.name_or_email}!"
       redirect_to questions_path
     else
       render :new, status: :unprocessable_entity
