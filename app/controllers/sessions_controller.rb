@@ -1,4 +1,7 @@
 class SessionsController < ApplicationController
+  before_action :require_no_authentication, only: %i[new create]
+  before_action :require_authentication, only: %i[destroy]
+
   def new
   end
 
@@ -15,5 +18,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    sign_out
+    flash[:success] = "See you later!"
+    redirect_to root_path
   end
 end
