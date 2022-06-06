@@ -2,5 +2,7 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-import '@popperjs/core'
-import 'bootstrap/js/dist/dropdown'
+import "jquery"
+import "jquery_ujs"
+import "popper"
+import "bootstrap"
