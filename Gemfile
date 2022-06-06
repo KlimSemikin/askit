@@ -78,5 +78,5 @@ group :test do
 end
 
 gem "pagy", "~> 5.10"
-
 gem "draper", "~> 4.0"
+gem "valid_email2", "~> 4.0"
