@@ -1,7 +1,7 @@
-class Question < ApplicationRecord
-  validates :title, :body, presence: true, length: {minimum: 2}
+# frozen_string_literal: true
 
-  def formatted_created_at
-    created_at.strftime("%Y-%m-%d %H:%M:%S")
-  end
+class Question < ApplicationRecord
+  has_many :answers, dependent: :destroy
+
+  validates :title, :body, presence: true, length: { minimum: 2 }
 end
