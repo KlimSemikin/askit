@@ -9,7 +9,8 @@ class User < ApplicationRecord
 
   validates :password, confirmation: true, allow_blank: true,
                        length: { minimum: 8, maximum: 70 }
-  validate :new_password_not_old, :password_presence, :password_complexity
+  validate :password_presence, :password_complexity
+  validate :new_password_not_old, on: :update
 
   validates :email, presence: true, uniqueness: true, 'valid_email_2/email': true
 
