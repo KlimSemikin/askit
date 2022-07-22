@@ -4,7 +4,7 @@ class QuestionsController < ApplicationController
   before_action :set_question!, only: %i[destroy edit show update]
 
   def create
-    @question = Question.new question_params
+    @question = current_user.questions.build question_params
     if @question.save
       flash[:success] = t('.success')
       redirect_to questions_path
@@ -16,7 +16,7 @@ class QuestionsController < ApplicationController
   def destroy
     @question.destroy
     flash[:success] = t('.success')
-    redirect_to questions_path
+    redirect_to questions_path, status: :see_other
   end
 
   def edit; end
