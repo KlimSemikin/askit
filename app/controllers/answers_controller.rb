@@ -39,11 +39,11 @@ class AnswersController < ApplicationController
   private
 
   def answer_create_params
-    params.require('answer').permit(:body).merge(user: current_user)
+    params.require(:answer).permit(:body).merge(user: current_user)
   end
 
   def answer_update_params
-    params.require('answer').permit(:body)
+    params.require(:answer).permit(:body)
   end
 
   def set_question!
