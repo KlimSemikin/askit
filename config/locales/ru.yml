@@ -8,14 +8,93 @@ ru:
       question:
         title: Заголовок
         body: Текст
+      answer:
+        title: Заголовок
+        body: Текст
+      user:
+        email: Эл. почта
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        name: Имя
+        old_password: Старый пароль
+  admin:
+    users:
+      index:
+        title: Управление пользователями
+        download_zipped: Загрузить архив XLSX
+        upload_form:
+          select_archive: Выберите архив
+          submit: Загрузить!
+        upload_zipped: Загрузить пользователей из XLSX
   pages:
     index:
       title: Добро пожловть в AskIt!
   menu:
     home: Главная
     questions: Вопросы
+    edit_profile: Изм. профиль
+    log_out: Выйти
+    sing_up: Регистрация
+    log_in: Войти
+    users: Пользователи
+  answers:
+    edit:
+      title: Изменить ответ
+    create:
+      success: Ответ создан!
+    destroy:
+      success: Ответ удалён!
+    update:
+      success: Ответ обновлён!
+  global:
+    button:
+      delete: Удалить
+      edit: Изменить
+      show: Показать
+      submit: Отправить!
+    dialog:
+      you_sure: Вы уверены?
+    text:
+      omission: ... (далее)
+    forms:
+      register: Регистрация
+      save: Сохранить
   questions:
     destroy:
       success: Вопрос удалён!
     create:
       success: Вопрос создан!
+    edit:
+      title: Редактировать вопрос
+    index:
+      new: Новый вопрос
+      title: Вопросы
+    new:
+      title: Новый вопрос
+    show:
+      answers: Ответы
+      write_answer: Напишите свой ответ
+    update:
+      success: Вопрос обновлён!
+  sessions:
+    new:
+      title: Войти
+      form:
+        email: Эл. почта
+        password: Пароль
+        remember_me: Запомнить меня
+        submit: Войти!
+    create:
+      success: Рады видеть снова, %{name}!
+      warning: Неправильная почта и/или пароль!
+    destroy:
+      success: Увидимся снова!
+  users:
+    update:
+      success: Ваш профиль успешно обновлён!
+    create:
+      success: Добро пожаловать в AskIt, %{name}!
+    edit:
+      title: Редактировать профиль
+    new:
+      title: Регистрация

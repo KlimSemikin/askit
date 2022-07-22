@@ -7,8 +7,7 @@
     </div>
 
     <div class="col-sm-10">
-      <%= f.text_field :title, placeholder: true, class: 'form-control' %>
-      <%#= f.text_field :title, required: true, minlength: 2, placeholder: "Title", class: 'form-control' %>
+      <%= f.text_field :title, placeholder: true, required: true, minlength: 2, class: 'form-control' %>
     </div>
   </div>
 
@@ -18,10 +17,9 @@
     </div>
 
     <div class="col-sm-10">
-      <%= f.text_area :body, placeholder: true, class: 'form-control'%>
-      <%#= f.text_area :body, required: true, minlength: 2, class: 'form-control'%>
+      <%= f.text_area :body, placeholder: true, required: true, minlength: 2, class: 'form-control' %>
     </div>
   </div>
 
-  <%= f.submit "Submit question!", class: 'btn btn-primary'%>
+  <%= f.submit t('global.button.submit'), class: 'btn btn-primary'%>
 <% end %>

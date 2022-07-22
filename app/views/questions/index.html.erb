@@ -1,9 +1,9 @@
-<% provide :page_title, t('menu.questions') %>
+<% provide :page_title, t('.title') %>
 <% currently_at t('menu.questions') %>
 
-<h2 class="mb-4"><%= t('menu.questions') %></h2>
+<h2 class="mb-4"><%= t('.title') %></h2>
 
-<%= link_to "New question", new_question_path, class: "btn btn-primary btn-lg mb-3" %>
+<%= link_to t('.new'), new_question_path, class: "btn btn-primary btn-lg mb-3" %>
 
 <%= pagination @pagy %>
 

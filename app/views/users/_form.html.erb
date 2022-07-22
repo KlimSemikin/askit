@@ -7,7 +7,7 @@
     </div>
 
     <div class="col-sm-10">
-      <%= f.email_field :email, placeholder: "e-mail", class: 'form-control form-control-lg' %>
+      <%= f.email_field :email, placeholder: true, required: true, class: 'form-control form-control-lg' %>
     </div>
   </div>
 
@@ -17,7 +17,7 @@
     </div>
 
     <div class="col-sm-10">
-      <%= f.text_field :name, placeholder: "name", class: 'form-control form-control-lg' %>
+      <%= f.text_field :name, placeholder: true, required: true, class: 'form-control form-control-lg' %>
     </div>
   </div>
 
@@ -27,7 +27,7 @@
     </div>
 
     <div class="col-sm-10">
-      <%= f.password_field :password, class: 'form-control form-control-lg' %>
+      <%= f.password_field :password, placeholder: true, class: 'form-control form-control-lg' %>
     </div>
   </div>
 
@@ -37,7 +37,7 @@
     </div>
 
     <div class="col-sm-10">
-      <%= f.password_field :password_confirmation, class: 'form-control form-control-lg' %>
+      <%= f.password_field :password_confirmation, placeholder: true, class: 'form-control form-control-lg' %>
     </div>
   </div>
 
@@ -48,11 +48,11 @@
       </div>
 
       <div class="col-sm-10">
-        <%= f.password_field :old_password, class: 'form-control form-control-lg' %>
+        <%= f.password_field :old_password, placeholder: true, class: 'form-control form-control-lg' %>
       </div>
     </div>
   <% end %>
 
-  <%= f.submit (@user.new_record? ? "Register" : "Save"),
+  <%= f.submit (@user.new_record? ? t('global.forms.register') : t('global.forms.save')),
     class: 'btn btn-primary btn-lg' %>
 <% end %>

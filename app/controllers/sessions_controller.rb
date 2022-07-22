@@ -13,14 +13,14 @@ class SessionsController < ApplicationController
       flash[:success] = t('.success', name: current_user.name_or_email)
       redirect_to root_path
     else
-      flash[:warning] = 'Incorrect email and/or password!'
+      flash[:warning] = t('.warning')
       render :new, status: :unprocessable_entity
     end
   end
 
   def destroy
     sign_out
-    flash[:success] = 'See you later!'
+    flash[:success] = t('.success')
     redirect_to root_path
   end
 

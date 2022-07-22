@@ -8,14 +8,93 @@ en:
       question:
         title: Title
         body: Body
+      answer:
+        title: Title
+        body: Body
+      user:
+        email: Email
+        password: Password
+        password_confirmation: Password confirmation
+        name: Name
+        old_password: Old password
+  admin:
+    users:
+      index:
+        title: Admin Users
+        download_zipped: Download zipped XLSX
+        upload_form:
+          select_archive: Select archive
+          submit: Upload!
+        upload_zipped: Upload users from XLSX
   pages:
     index:
       title: Welcome to AskIt!
   menu:
     home: Home
     questions: Questions
+    edit_profile: Edit profile
+    log_out: Log Out
+    sing_up: Sign Up
+    log_in: Log In
+    users: Users
+  answers:
+    edit:
+      title: Edit answer
+    create:
+      success: Answer created!
+    destroy:
+      success: Answer deleted!
+    update:
+      success: Answer updated!
+  global:
+    button:
+      delete: Delete
+      edit: Edit
+      show: Show
+      submit: Submit!
+    dialog:
+      you_sure: Are you sure?
+    text:
+      omission: ... (continued)
+    forms:
+      register: Register
+      save: Save
   questions:
     destroy:
       success: Question deleted!
     create:
       success: Question created!
+    edit:
+      title: Edit question
+    index:
+      new: New question
+      title: Questions
+    new:
+      title: New question
+    show:
+      answers: Answers
+      write_answer: Write your answer
+    update:
+      success: Question updated!
+  sessions:
+    new:
+      title: Log In
+      form:
+        email: Email
+        password: Password
+        remember_me: Remember me
+        submit: Sign In!
+    create:
+      success: Welcome back, %{name}!
+      warning: Incorrect email and/or password!
+    destroy:
+      success: See you later!
+  users:
+    update:
+      success: Your profile was successfully updated!
+    create:
+      success: Welcome to the app, %{name}!
+    edit:
+      title: Edit profile
+    new:
+      title: Registration

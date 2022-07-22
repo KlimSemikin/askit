@@ -1,6 +1,6 @@
-<% provide :page_title, "Sign Up" %>
-<% currently_at "Sign Up" %>
+<% provide :page_title, t('.title') %>
+<% currently_at t('menu.sing_up') %>
 
-<h2 class="mb-4">Registration</h2>
+<h2 class="mb-4"><%= t('.title') %></h2>
 
 <%= render "form" %>
