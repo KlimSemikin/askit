@@ -49,8 +49,7 @@
                 <li><hr class="dropdown-divider"></li>
 
                 <li>
-                  <%= link_to 'Log Out', session_path,
-                    class: 'dropdown-item', data: {method: :delete} %>
+                  <%= button_to 'Log Out', session_path, class: 'dropdown-item', method: :delete %>
                 </li>
               </ul>
             </li>
