@@ -34,7 +34,7 @@ class SessionsController < ApplicationController
     sign_in user
     if params[:remember_me] == '1'
       remember(user)
-    elsif params[:remember_me] == '0'
+    when '0'
       forget(user)
     end
   end
