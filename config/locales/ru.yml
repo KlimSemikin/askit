@@ -1,0 +1,109 @@
+---
+ru:
+  activerecord:
+    attributes:
+      answer:
+        body: Текст
+        question: Вопрос
+      question:
+        body: Текст
+        title: Заголовок
+      user:
+        created_at: Создан
+        email: "Эл. почта"
+        name: Имя
+        old_password: "Старый пароль"
+        password: Пароль
+        password_confirmation: "Подтверждение пароля"
+        updated_at: Обновлен
+    models:
+      question: Вопрос
+  admin:
+    users:
+      create:
+        success: "Пользователи импортированы!"
+      index:
+        download_zipped: "Загрузить архив XLSX"
+        title: "Управление пользователями"
+        upload_form:
+          select_archive: "Выберите архив"
+          submit: Загрузить!
+        upload_zipped: "Загрузить пользователей из XLSX"
+  answers:
+    create:
+      success: "Ответ создан!"
+    destroy:
+      success: "Ответ удалён!"
+    edit:
+      title: "Изменить ответ"
+    update:
+      success: "Ответ обновлён!"
+  en: Английский
+  global:
+    button:
+      delete: Удалить
+      edit: Изменить
+      show: Показать
+      submit: Отправить!
+    dialog:
+      you_sure: "Вы уверены?"
+    flash:
+      already_signed_in: "Вы уже вошли в систему!"
+      not_signed_in: "Войдите в систему!"
+    text:
+      omission: "... (далее)"
+  menu:
+    edit_profile: "Изм. профиль"
+    home: Главная
+    log_in: Войти
+    log_out: Выйти
+    questions: Вопросы
+    sing_up: Регистрация
+    users: Пользователи
+  pages:
+    index:
+      title: "Добро пожловть в AskIt!"
+  questions:
+    create:
+      success: "Вопрос создан!"
+    destroy:
+      success: "Вопрос удалён!"
+    edit:
+      title: "Редактировать вопрос"
+    index:
+      new: "Новый вопрос"
+      title: Вопросы
+    new:
+      title: "Новый вопрос"
+    show:
+      answers: Ответы
+      write_answer: "Напишите свой ответ"
+    update:
+      success: "Вопрос обновлён!"
+  ru: Русский
+  sessions:
+    create:
+      success: "Рады видеть снова, %{name}!"
+      warning: "Неправильная почта и/или пароль!"
+    destroy:
+      success: "Увидимся снова!"
+    new:
+      form:
+        email: "Эл. почта"
+        password: Пароль
+        remember_me: "Запомнить меня"
+        submit: Войти!
+      title: Войти
+  users:
+    create:
+      success: "Добро пожаловать в AskIt, %{name}!"
+    edit:
+      title: "Редактировать профиль"
+    global:
+      forms:
+        register: Регистрация
+        save: Сохранить
+    new:
+      title: Регистрация
+    update:
+      success: "Ваш профиль успешно обновлён!"

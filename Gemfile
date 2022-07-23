@@ -45,7 +45,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'bootsnap', require: false
 
 # Use Bootstrap to use bootstrap css
-gem 'bootstrap', '~> 5.1.0'
+gem 'bootstrap', '~> 5.1'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -78,6 +78,7 @@ group :test do
   gem 'webdrivers'
 end
 
+gem 'activerecord-import', '~> 1.2'
 gem 'caxlsx', '~> 3.2'
 gem 'caxlsx_rails', '~> 0.6'
 gem 'draper', '~> 4.0'
@@ -85,4 +86,4 @@ gem 'pagy', '~> 5.10'
 gem 'rubyXL', '~> 3.4'
 gem 'rubyzip'
 gem 'valid_email2', '~> 4.0'
-gem 'activerecord-import', '~> 1.2'
+gem "rails-i18n", "~> 7.0"

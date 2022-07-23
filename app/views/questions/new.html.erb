@@ -1,6 +1,6 @@
-<% provide :page_title, "Question" %>
-<% currently_at "Question" %>
+<% provide :page_title, t('.title') %>
+<% currently_at t('menu.questions') %>
 
-<h2 class="mb-4">New question</h2>
+<h2 class="mb-4"><%= t('.title') %></h2>
 
 <%= render 'form' %>

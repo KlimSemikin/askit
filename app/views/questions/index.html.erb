@@ -1,34 +1,12 @@
-<% provide :page_title, "Questions" %>
-<% currently_at "Questions" %>
+<% provide :page_title, t('.title') %>
+<% currently_at t('menu.questions') %>
 
-<h2 class="mb-4">Questions</h2>
+<h2 class="mb-4"><%= t('.title') %></h2>
 
-<%= link_to "New question", new_question_path, class: "btn btn-primary btn-lg mb-3" %>
+<%= link_to t('.new'), new_question_path, class: "btn btn-primary btn-lg mb-3" %>
 
 <%= pagination @pagy %>
 
-<% @questions.each do |question| %>
-  <article class="card my-3">
-    <div class="card-body">
-      <h4><%= question.title %></h4>
-
-      <section class="card-text">
-        <time datetime="<%= question.formatted_created_at %>">
-          <small><%= question.formatted_created_at %></small>
-        </time>
-
-        <p class="my-2">
-          <%= truncate strip_tags(question.body), length: 150, omission: "... (continued)" %>
-        </p>
-      </section>
-
-      <%= link_to "Show", question_path(question), class: "btn btn-primary" %>
-      <%= link_to "Edit", edit_question_path(question), class: "btn btn-secondary" %>
-      <%= button_to "Destroy", question_path(question), class: "btn btn-danger",
-        method: :delete, form: { data: { turbo_confirm: 'Are you sure?' } } %>
-    </div>
-  </article>
-
-<% end %>
+<%= render partial: 'question', collection: @questions %>
 
 <%= pagination @pagy %>

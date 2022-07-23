@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update user_params
-      flash[:success] = 'Your profile was successfully updated!'
+      flash[:success] = t('.success')
       redirect_to edit_user_path(@user)
     else
       render :edit, status: :unprocessable_entity
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
 
     if @user.save
       sign_in @user
-      flash[:success] = "Welcome to the app, #{current_user.name_or_email}!"
+      flash[:success] = t('.success', name: current_user.name_or_email)
       redirect_to questions_path
     else
       render :new, status: :unprocessable_entity
@@ -39,6 +39,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require('user').permit(:email, :name, :password, :password_confirmation, :old_password)
+    params.require(:user).permit(:email, :name, :password, :password_confirmation, :old_password)
   end
 end

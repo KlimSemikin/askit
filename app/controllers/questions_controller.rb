@@ -4,9 +4,9 @@ class QuestionsController < ApplicationController
   before_action :set_question!, only: %i[destroy edit show update]
 
   def create
-    @question = Question.new question_params
+    @question = current_user.questions.build question_params
     if @question.save
-      flash[:success] = 'Question created!'
+      flash[:success] = t('.success')
       redirect_to questions_path
     else
       render :new, status: :unprocessable_entity
@@ -15,8 +15,8 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    flash[:success] = 'Question deleted!'
-    redirect_to questions_path
+    flash[:success] = t('.success')
+    redirect_to questions_path, status: :see_other
   end
 
   def edit; end
@@ -39,7 +39,7 @@ class QuestionsController < ApplicationController
 
   def update
     if @question.update question_params
-      flash[:success] = 'Question updated!'
+      flash[:success] = t('.success')
       redirect_to questions_path
     else
       render :edit, status: :unprocessable_entity
@@ -49,7 +49,7 @@ class QuestionsController < ApplicationController
   private
 
   def question_params
-    params.require('question').permit(:title, :body)
+    params.require(:question).permit(:title, :body)
   end
 
   def set_question!

@@ -10,6 +10,14 @@
 
 30.times do
   title = Faker::Hipster.sentence(word_count: 3)
+  body = Faker::Lorem.paragraph(sentence_count: 10, supplemental: true, random_sentences_to_add: 4)
+  user = User.all.sample
+  Question.create(title:, body:, user:)
+end
+
+30.times do
+  question = Question.all.sample
   body = Faker::Lorem.paragraph(sentence_count: 5, supplemental: true, random_sentences_to_add: 4)
-  Question.create(title:, body:)
+  user = User.all.sample
+  question.answers.create(question:, body:, user:)
 end
