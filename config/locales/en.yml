@@ -1,51 +1,44 @@
+---
 en:
-  en: English
-  ru: Russian
   activerecord:
+    attributes:
+      answer:
+        body: Body
+        question: Question
+      question:
+        body: Body
+        title: Title
+      user:
+        created_at: "Created at"
+        email: Email
+        name: Name
+        old_password: "Old password"
+        password: Password
+        password_confirmation: "Password confirmation"
+        updated_at: "Updated at"
     models:
       question: Question
-    attributes:
-      question:
-        title: Title
-        body: Body
-      answer:
-        title: Title
-        body: Body
-      user:
-        email: Email
-        password: Password
-        password_confirmation: Password confirmation
-        name: Name
-        old_password: Old password
   admin:
     users:
+      create:
+        success: "Users imported!"
       index:
-        title: Admin Users
-        download_zipped: Download zipped XLSX
+        download_zipped: "Download zipped XLSX"
+        title: "Admin Users"
         upload_form:
-          select_archive: Select archive
+          select_archive: "Select archive"
           submit: Upload!
-        upload_zipped: Upload users from XLSX
-  pages:
-    index:
-      title: Welcome to AskIt!
-  menu:
-    home: Home
-    questions: Questions
-    edit_profile: Edit profile
-    log_out: Log Out
-    sing_up: Sign Up
-    log_in: Log In
-    users: Users
+        upload_zipped: "Upload users from XLSX"
   answers:
-    edit:
-      title: Edit answer
     create:
-      success: Answer created!
+      success: "Answer created!"
     destroy:
-      success: Answer deleted!
+      success: "Answer deleted!"
+    edit:
+      title: "Edit answer"
     update:
-      success: Answer updated!
+      success: "Answer updated!"
+  en: English
   global:
     button:
       delete: Delete
@@ -53,48 +46,64 @@ en:
       show: Show
       submit: Submit!
     dialog:
-      you_sure: Are you sure?
+      you_sure: "Are you sure?"
+    flash:
+      already_signed_in: "You are already signed in!"
+      not_signed_in: "You are not signed in!"
     text:
-      omission: ... (continued)
-    forms:
-      register: Register
-      save: Save
-  questions:
-    destroy:
-      success: Question deleted!
-    create:
-      success: Question created!
-    edit:
-      title: Edit question
+      omission: "... (continued)"
+  menu:
+    edit_profile: "Edit profile"
+    home: Home
+    log_in: "Log In"
+    log_out: "Log Out"
+    questions: Questions
+    sing_up: "Sign Up"
+    users: Users
+  pages:
     index:
-      new: New question
+      title: "Welcome to AskIt!"
+  questions:
+    create:
+      success: "Question created!"
+    destroy:
+      success: "Question deleted!"
+    edit:
+      title: "Edit question"
+    index:
+      new: "New question"
       title: Questions
     new:
-      title: New question
+      title: "New question"
     show:
       answers: Answers
-      write_answer: Write your answer
+      write_answer: "Write your answer"
     update:
-      success: Question updated!
+      success: "Question updated!"
+  ru: Russian
   sessions:
+    create:
+      success: "Welcome back, %{name}!"
+      warning: "Incorrect email and/or password!"
+    destroy:
+      success: "See you later!"
     new:
-      title: Log In
       form:
         email: Email
         password: Password
-        remember_me: Remember me
-        submit: Sign In!
-    create:
-      success: Welcome back, %{name}!
-      warning: Incorrect email and/or password!
-    destroy:
-      success: See you later!
+        remember_me: "Remember me"
+        submit: "Sign In!"
+      title: "Log In"
   users:
-    update:
-      success: Your profile was successfully updated!
     create:
-      success: Welcome to the app, %{name}!
+      success: "Welcome to the app, %{name}!"
     edit:
-      title: Edit profile
+      title: "Edit profile"
+    global:
+      forms:
+        register: Register
+        save: Save
     new:
       title: Registration
+    update:
+      success: "Your profile was successfully updated!"
