@@ -66,6 +66,7 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem 'bullet', '~> 7.0'
   gem 'rubocop', '~> 1.29', require: false
   gem 'rubocop-performance', '~> 1.14', require: false
   gem 'rubocop-rails', '~> 2.14', require: false
@@ -83,7 +84,7 @@ gem 'caxlsx', '~> 3.2'
 gem 'caxlsx_rails', '~> 0.6'
 gem 'draper', '~> 4.0'
 gem 'pagy', '~> 5.10'
+gem 'rails-i18n', '~> 7.0'
 gem 'rubyXL', '~> 3.4'
 gem 'rubyzip'
 gem 'valid_email2', '~> 4.0'
-gem "rails-i18n", "~> 7.0"

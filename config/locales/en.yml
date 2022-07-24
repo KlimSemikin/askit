@@ -5,6 +5,8 @@ en:
       answer:
         body: Body
         question: Question
+      comment:
+        body: Body
       question:
         body: Body
         title: Title
@@ -38,6 +40,11 @@ en:
       title: "Edit answer"
     update:
       success: "Answer updated!"
+  comments:
+    create:
+      success: "Comment added!"
+    destroy:
+      success: "Comment deleted!"
   en: English
   global:
     button:
@@ -77,6 +84,7 @@ en:
       title: "New question"
     show:
       answers: Answers
+      comments: Comments
       write_answer: "Write your answer"
     update:
       success: "Question updated!"

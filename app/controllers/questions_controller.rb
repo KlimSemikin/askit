@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class QuestionsController < ApplicationController
+  include QuestionsAnswers
   before_action :set_question!, only: %i[destroy edit show update]
 
   def create
@@ -22,7 +23,7 @@ class QuestionsController < ApplicationController
   def edit; end
 
   def index
-    @pagy, @questions = pagy Question.order(created_at: :desc)
+    @pagy, @questions = pagy Question.includes(:user).order(created_at: :desc)
     @questions = @questions.decorate
   end
 
@@ -31,10 +32,7 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    @question = @question.decorate
-    @answer = @question.answers.build
-    @pagy, @answers = pagy @question.answers.order(created_at: :desc)
-    @answers = @answers.decorate
+    load_question_answers
   end
 
   def update

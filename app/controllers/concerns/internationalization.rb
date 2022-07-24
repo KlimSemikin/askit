@@ -3,15 +3,16 @@
 module Internationalization
   extend ActiveSupport::Concern
 
+  # rubocop:disable Metrics/BlockLength
   included do
     around_action :switch_locale
 
     private
 
-    def switch_locale(&action)
+    def switch_locale(&)
       locale = locale_from_url || locale_from_headers || I18n.default_locale
       response.set_header 'Content-Language', locale
-      I18n.with_locale locale, &action
+      I18n.with_locale(locale, &)
     end
 
     # Adapted from https://github.com/rack/rack-contrib/blob/master/lib/rack/contrib/locale.rb
@@ -62,4 +63,5 @@ module Internationalization
       { locale: I18n.locale }
     end
   end
+  # rubocop:enable Metrics/BlockLength
 end
