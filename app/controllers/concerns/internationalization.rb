@@ -3,6 +3,7 @@
 module Internationalization
   extend ActiveSupport::Concern
 
+  # rubocop:disable Metrics/BlockLength
   included do
     around_action :switch_locale
 
@@ -62,4 +63,5 @@ module Internationalization
       { locale: I18n.locale }
     end
   end
+  # rubocop:enable Metrics/BlockLength
 end

@@ -32,7 +32,8 @@ class SessionsController < ApplicationController
 
   def do_sign_in(user)
     sign_in user
-    if params[:remember_me] == '1'
+    case params[:remember_me]
+    when '1'
       remember(user)
     when '0'
       forget(user)
