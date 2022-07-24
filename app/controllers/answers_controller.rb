@@ -13,7 +13,7 @@ class AnswersController < ApplicationController
       flash[:success] = t('.success')
       redirect_to question_path(@question)
     else
-      load_question_answers(do_render: true)
+      load_question_answers do_render: true, status: :unprocessable_entity
     end
   end
 
