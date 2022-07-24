@@ -20,19 +20,12 @@ class UserBulkService < ApplicationService
 
   def users_from(entry)
     sheet = RubyXL::Parser.parse_buffer(entry.get_input_stream.read)[0]
-    sheet.filter_map do |row|
-      next if row.nil?
-
-      cells = row.cells
-
-      next if cells[0].nil?
-
-      User.new(
-        name: cells[0]&.value.to_s,
-        email: cells[1]&.value.to_s,
-        password: cells[2]&.value.to_s,
-        password_confirmation: cells[2]&.value.to_s
-      )
+    sheet.map do |row|
+      cells = row.cells[0..2].map { |c| c&.value.to_s }
+      User.new name: cells[0],
+               email: cells[1],
+               password: cells[2],
+               password_confirmation: cells[2]
     end
   end
 end
