@@ -5,6 +5,8 @@ ru:
       answer:
         body: Текст
         question: Вопрос
+      comment:
+        body: Текст
       question:
         body: Текст
         title: Заголовок
@@ -38,6 +40,11 @@ ru:
       title: "Изменить ответ"
     update:
       success: "Ответ обновлён!"
+  comments:
+    create:
+      success: "Комментарий добавлен!"
+    destroy:
+      success: "Комментарий удалён!"
   en: Английский
   global:
     button:
@@ -77,6 +84,7 @@ ru:
       title: "Новый вопрос"
     show:
       answers: Ответы
+      comments: Комментарии
       write_answer: "Напишите свой ответ"
     update:
       success: "Вопрос обновлён!"
