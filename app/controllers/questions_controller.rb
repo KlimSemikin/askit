@@ -3,7 +3,6 @@
 class QuestionsController < ApplicationController
   include QuestionsAnswers
   before_action :set_question!, only: %i[destroy edit show update]
-  before_action :fetch_tags, only: %i[new edit]
 
   def create
     @question = current_user.questions.build question_params
@@ -54,9 +53,5 @@ class QuestionsController < ApplicationController
 
   def set_question!
     @question = Question.find(params[:id])
-  end
-
-  def fetch_tags
-    @tags = Tag.all
   end
 end
