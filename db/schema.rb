@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_24_104528) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_25_195323) do
   create_table "answers", force: :cascade do |t|
     t.text "body", null: false
     t.integer "question_id", null: false
@@ -55,6 +55,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_24_104528) do
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["title"], name: "index_tags_on_title", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -65,6 +66,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_24_104528) do
     t.datetime "updated_at", null: false
     t.string "remember_token_digest"
     t.string "gravatar_hash"
+    t.integer "role", default: 0, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
