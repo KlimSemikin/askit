@@ -1,6 +1,6 @@
-<%= render "shared/errors", object: @user %>
+<%= render "shared/errors", object: user %>
 
-<%= form_with model: @user do |f| %>
+<%= form_with model: user do |f| %>
   <div class="mb-3 row">
     <div class="col-sm-2 col-form-label">
       <%= f.label :email %>
@@ -18,6 +18,17 @@
 
     <div class="col-sm-10">
       <%= f.text_field :name, placeholder: true, required: true, class: 'form-control form-control-lg' %>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <div class="col-sm-2 col-form-label">
+      <%= f.label :role %>
+    </div>
+
+    <div class="col-sm-10">
+      <%= f.text_field :role, value: t(user.role, scope: 'global.user.roles'),
+        class: 'form-control-plaintext form-control-lg', readonly: true %>
     </div>
   </div>
 
@@ -41,7 +52,7 @@
     </div>
   </div>
 
-  <% unless @user.new_record? %>
+  <% unless user.new_record? %>
     <div class="mb-3 row">
       <div class="col-sm-2 col-form-label">
         <%= f.label :old_password %>
@@ -53,6 +64,6 @@
     </div>
   <% end %>
 
-  <%= f.submit (@user.new_record? ? t('users.global.forms.register') : t('users.global.forms.save')),
+  <%= f.submit (user.new_record? ? t('users.global.forms.register') : t('users.global.forms.save')),
     class: 'btn btn-primary btn-lg' %>
 <% end %>
