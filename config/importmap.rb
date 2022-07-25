@@ -11,5 +11,5 @@ pin_all_from 'app/javascript/controllers', under: 'controllers'
 pin 'popper', to: 'popper.js', preload: true
 pin 'bootstrap', to: 'bootstrap.min.js', preload: true
 
-pin 'tom-select', to: "https://cdn.jsdelivr.net/npm/tom-select@2.1.0/dist/js/tom-select.complete.min.js"
-pin 'utils', to: "scripts/utils"
+pin 'tom-select', to: 'https://cdn.jsdelivr.net/npm/tom-select@2.1.0/dist/js/tom-select.complete.min.js'
+pin 'utils', to: 'scripts/utils'
