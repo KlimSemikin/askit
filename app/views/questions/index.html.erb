@@ -3,6 +3,23 @@
 
 <h2 class="mb-4"><%= t('.title') %></h2>
 
+<section class="mb-5">
+  <%= form_with url: questions_path, method: :get do |f| %>
+    <h3><%= f.label :tag_ids, t('.search_by_tags_form.title') %></h3>
+
+    <div class="mb-3">
+      <%= f.collection_select :tag_ids, (@tags || []), :id, :title,
+        { selected: params[:tag_ids] },
+        { multiple: true,
+          required: true,
+          class: 'js-multiple-select js-ajax-select w-100',
+          data: {'ajax-url': '/api/tags', placeholder: t('.search_by_tags_form.enter_tag')} } %>
+    </div>
+
+    <%= f.submit t('global.button.submit'), class: 'btn btn-primary' %>
+  <% end %>
+</section>
+
 <%= link_to t('.new'), new_question_path, class: "btn btn-primary btn-lg mb-3" %>
 
 <%= pagination @pagy %>
