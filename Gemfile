@@ -88,5 +88,3 @@ gem 'rails-i18n', '~> 7.0'
 gem 'rubyXL', '~> 3.4'
 gem 'rubyzip'
 gem 'valid_email2', '~> 4.0'
-
-gem 'select2-rails', '~> 4.1.0.pre.beta.1'
