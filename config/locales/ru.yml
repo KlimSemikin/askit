@@ -79,8 +79,13 @@ ru:
       success: "Вопрос удалён!"
     edit:
       title: "Редактировать вопрос"
+    form:
+      enter_tag: "Начните вводить название тега"
     index:
       new: "Новый вопрос"
+      search_by_tags_form:
+        enter_tag: "Начните вводить название тега"
+        title: "Поиск по тегам"
       title: Вопросы
     new:
       title: "Новый вопрос"

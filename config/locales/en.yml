@@ -79,8 +79,13 @@ en:
       success: "Question deleted!"
     edit:
       title: "Edit question"
+    form:
+      enter_tag: "Start typing the tag name"
     index:
       new: "New question"
+      search_by_tags_form:
+        enter_tag: "Start typing the tag name"
+        title: "Search by tags"
       title: Questions
     new:
       title: "New question"
