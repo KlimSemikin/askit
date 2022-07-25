@@ -9,6 +9,8 @@ en:
         body: Body
       question:
         body: Body
+        tag_ids: Tags
+        tags: Tags
         title: Title
       user:
         created_at: "Created at"

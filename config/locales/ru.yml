@@ -9,6 +9,8 @@ ru:
         body: Текст
       question:
         body: Текст
+        tag_ids: Теги
+        tags: Теги
         title: Заголовок
       user:
         created_at: Создан
