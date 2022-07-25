@@ -10,3 +10,9 @@ pin_all_from 'app/javascript/controllers', under: 'controllers'
 
 pin 'popper', to: 'popper.js', preload: true
 pin 'bootstrap', to: 'bootstrap.min.js', preload: true
+
+pin 'jquery', to: 'https://ga.jspm.io/npm:jquery@3.6.0/dist/jquery.js', preload: true
+pin 'select2'
+pin 'select2_locale_ru'
+pin 'select2_locale_en'
+pin 'utils'
