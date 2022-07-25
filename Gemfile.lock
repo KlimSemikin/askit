@@ -151,7 +151,7 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.2)
     minitest (5.16.2)
-    msgpack (1.5.3)
+    msgpack (1.5.4)
     net-imap (0.2.3)
       digest
       net-protocol
@@ -258,6 +258,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    select2-rails (4.1.0.pre.beta.1)
     selenium-webdriver (4.3.0)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
@@ -333,6 +334,7 @@ DEPENDENCIES
   rubocop-rails (~> 2.14)
   rubyXL (~> 3.4)
   rubyzip
+  select2-rails (~> 4.1.0.pre.beta.1)
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)
