@@ -19,6 +19,7 @@ ru:
         old_password: "Старый пароль"
         password: Пароль
         password_confirmation: "Подтверждение пароля"
+        role: Роль
         updated_at: Обновлен
     models:
       question: Вопрос
@@ -26,6 +27,10 @@ ru:
     users:
       create:
         success: "Пользователи импортированы!"
+      destroy:
+        success: "Пользователь удалён!"
+      edit:
+        title: "Редактирование пользователя"
       index:
         download_zipped: "Загрузить архив XLSX"
         title: "Управление пользователями"
@@ -33,6 +38,8 @@ ru:
           select_archive: "Выберите архив"
           submit: Загрузить!
         upload_zipped: "Загрузить пользователей из XLSX"
+      update:
+        success: "Пользователь обновлён!"
   answers:
     create:
       success: "Ответ создан!"
@@ -61,6 +68,11 @@ ru:
       not_signed_in: "Войдите в систему!"
     text:
       omission: "... (далее)"
+    user:
+      roles:
+        admin: Админ
+        basic: Базовый
+        moderator: Модератор
   menu:
     edit_profile: "Изм. профиль"
     home: Главная
