@@ -9,12 +9,12 @@ class User < ApplicationRecord
   has_many :questions, dependent: :destroy
   has_many :answers, dependent: :destroy
 
-  validate :correct_old_password, on: :update, if: -> { password.present? }
+  validate :correct_old_password, on: :update, if: -> { password.present? && !admin_edit }
 
   validates :password, confirmation: true, allow_blank: true,
                        length: { minimum: 8, maximum: 70 }
   validate :password_presence, :password_complexity
-  validate :new_password_not_old, on: :update
+  validate :new_password_not_old, on: :update, if: -> { !admin_edit }
 
   validates :email, presence: true, uniqueness: true, 'valid_email_2/email': true
   validates :role, presence: true
@@ -61,7 +61,7 @@ class User < ApplicationRecord
   end
 
   def new_password_not_old
-    return unless BCrypt::Password.new(password_digest).is_password?(old_password)
+    return unless BCrypt::Password.new(password_digest_was).is_password?(password)
 
     errors.add :password, 'is same like old'
   end
