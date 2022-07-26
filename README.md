@@ -30,3 +30,4 @@
 7. Реализован асинхронный поиск по вопросам, использующий [Tom Select](https://tom-select.js.org) и Ajax запрос.
 8. У пользователей есть 3 роли с разными правами доступа: basic, admin, moderator.
 9. Авторизация осуществляется с помощью гема [Pundit](https://github.com/varvet/pundit).
+10. Для оптимизации запросов к бд импользовался гем - [Bullet](https://github.com/flyerhzm/bullet).
