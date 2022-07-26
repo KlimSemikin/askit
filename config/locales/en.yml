@@ -65,6 +65,7 @@ en:
       you_sure: "Are you sure?"
     flash:
       already_signed_in: "You are already signed in!"
+      not_authorized: "You are not authorized to perform this action!"
       not_signed_in: "You are not signed in!"
     text:
       omission: "... (continued)"

@@ -65,6 +65,7 @@ ru:
       you_sure: "Вы уверены?"
     flash:
       already_signed_in: "Вы уже вошли в систему!"
+      not_authorized: "У вас нет прав на выполнение этого действия!"
       not_signed_in: "Войдите в систему!"
     text:
       omission: "... (далее)"
