@@ -21,8 +21,17 @@
 #   user = User.all.sample
 #   question.answers.create(question:, body:, user:)
 # end
+#
+# 30.times do
+#   title = Faker::Hipster.word
+#   Tag.create title:
+# end
 
-30.times do
-  title = Faker::Hipster.word
-  Tag.create title:
+5.times do
+  email = Faker::Internet.email
+  name = Faker::Name.name
+  password = 'Bbe31kchuw!'
+  role = 'basic'
+
+  User.create(email:, name:, password:, role:)
 end
