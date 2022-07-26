@@ -28,7 +28,7 @@ gem 'stimulus-rails'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem 'jbuilder'
-gem "blueprinter", "~> 0.25.3"
+gem 'blueprinter', '~> 0.25.3'
 
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 4.0'
@@ -85,6 +85,7 @@ gem 'caxlsx', '~> 3.2'
 gem 'caxlsx_rails', '~> 0.6'
 gem 'draper', '~> 4.0'
 gem 'pagy', '~> 5.10'
+gem 'pundit', '~> 2.2'
 gem 'rails-i18n', '~> 7.0'
 gem 'rubyXL', '~> 3.4'
 gem 'rubyzip'
