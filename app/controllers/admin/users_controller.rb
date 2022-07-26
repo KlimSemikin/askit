@@ -26,8 +26,7 @@ module Admin
       redirect_to admin_users_path
     end
 
-    def edit
-    end
+    def edit; end
 
     def update
       if @user.update user_params
