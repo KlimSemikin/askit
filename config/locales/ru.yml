@@ -25,6 +25,8 @@ ru:
       question: Вопрос
   admin:
     user_mailer:
+      bulk_export_done:
+        subject: "Экпорт пользователей завершён | AskIt"
       bulk_import_done:
         subject: "Импорт пользователей завершён | AskIt"
       bulk_import_fail:
@@ -37,7 +39,8 @@ ru:
       edit:
         title: "Редактирование пользователя"
       index:
-        download_zipped: "Загрузить архив XLSX"
+        download_zipped: "Зарузить архив XLSX"
+        success: "Вы получите электронное письмо, как только операция завершится"
         title: "Управление пользователями"
         upload_form:
           select_archive: "Выберите архив"

@@ -25,6 +25,8 @@ en:
       question: Question
   admin:
     user_mailer:
+      bulk_export_done:
+        subject: "User export done | AskIt"
       bulk_import_done:
         subject: "User import done | AskIt"
       bulk_import_fail:
@@ -38,6 +40,7 @@ en:
         title: "Edit user"
       index:
         download_zipped: "Download zipped XLSX"
+        success: "You'll get an email once this operation is done"
         title: "Admin Users"
         upload_form:
           select_archive: "Select archive"
