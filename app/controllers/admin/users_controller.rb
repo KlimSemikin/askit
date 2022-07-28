@@ -66,7 +66,7 @@ module Admin
     def user_params
       params.require(:user).permit(
         :email, :name, :password, :password_confirmation, :role
-      ).merge(admin_edit: true)
+      ).merge(skip_old_password: true)
     end
 
     def authorize_user!

@@ -5,19 +5,19 @@ class User < ApplicationRecord
   include Rememberable
 
   enum role: { basic: 0, moderator: 1, admin: 2 }, _suffix: :role
-  attr_accessor :old_password, :remember_token, :admin_edit
+  attr_accessor :old_password, :skip_old_password
 
   has_secure_password validations: false
 
   has_many :questions, dependent: :destroy
   has_many :answers, dependent: :destroy
 
-  validate :correct_old_password, on: :update, if: -> { password.present? && !admin_edit }
+  validate :correct_old_password, on: :update, if: -> { password.present? && !skip_old_password }
 
   validates :password, confirmation: true, allow_blank: true,
                        length: { minimum: 8, maximum: 70 }
   validate :password_presence, :password_complexity
-  validate :new_password_not_old, on: :update, if: -> { !admin_edit }
+  validate :new_password_not_old, on: :update, if: -> { !skip_old_password }
 
   validates :email, presence: true, uniqueness: true, 'valid_email_2/email': true
   validates :role, presence: true
