@@ -68,10 +68,10 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
   gem 'bullet', '~> 7.0'
+  gem 'letter_opener', '~> 1.8'
   gem 'rubocop', '~> 1.29', require: false
   gem 'rubocop-performance', '~> 1.14', require: false
   gem 'rubocop-rails', '~> 2.14', require: false
-  gem "letter_opener", "~> 1.8"
 end
 
 group :test do
