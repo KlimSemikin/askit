@@ -24,9 +24,14 @@ en:
     models:
       question: Question
   admin:
+    user_mailer:
+      bulk_import_done:
+        subject: "User import done | AskIt"
+      bulk_import_fail:
+        subject: "User import failed | AskIt"
     users:
       create:
-        success: "Users imported!"
+        success: "You'll get an email once this operation is done"
       destroy:
         success: "User destroyed!"
       edit:
