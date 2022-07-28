@@ -71,6 +71,7 @@ group :development do
   gem 'rubocop', '~> 1.29', require: false
   gem 'rubocop-performance', '~> 1.14', require: false
   gem 'rubocop-rails', '~> 2.14', require: false
+  gem "letter_opener", "~> 1.8"
 end
 
 group :test do
