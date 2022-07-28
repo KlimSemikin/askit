@@ -85,6 +85,25 @@ ru:
   pages:
     index:
       title: "Добро пожловть в AskIt!"
+  password_reset_mailer:
+    reset_email:
+      subject: "Сброс пароля | AskIt"
+  password_resets:
+    create:
+      success: "Если такой Email существует, вы получите письмо с инструкциями"
+    edit:
+      form:
+        submit: "Сбросить пароль!"
+      title: "Введите новый пароль"
+    fail: "Не удалось сбросить ваш пароль..."
+    new:
+      form:
+        back: "Назад ко входу в систему"
+        email: Email
+        submit: "Отправить инструкции для сброса пароля"
+      title: "Сбросить пароль"
+    update:
+      success: "Ваш пароль успешно обновлён!"
   questions:
     create:
       success: "Вопрос создан!"
@@ -118,6 +137,7 @@ ru:
     new:
       form:
         email: "Эл. почта"
+        forgot_password: "Забыл пароль"
         password: Пароль
         remember_me: "Запомнить меня"
         submit: Войти!

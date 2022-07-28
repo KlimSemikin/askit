@@ -85,6 +85,25 @@ en:
   pages:
     index:
       title: "Welcome to AskIt!"
+  password_reset_mailer:
+    reset_email:
+      subject: "Password reset | AskIt"
+  password_resets:
+    create:
+      success: "You will receive instructions if that Email exists"
+    edit:
+      form:
+        submit: "Reset my password!"
+      title: "Enter new password"
+    fail: "Could not reset your password..."
+    new:
+      form:
+        back: "Back to sign in"
+        email: Email
+        submit: "Send reset instruction"
+      title: "Reset password"
+    update:
+      success: "Your password was changed!"
   questions:
     create:
       success: "Question created!"
@@ -118,6 +137,7 @@ en:
     new:
       form:
         email: Email
+        forgot_password: "Forgot password"
         password: Password
         remember_me: "Remember me"
         submit: "Sign In!"
