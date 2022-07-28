@@ -52,7 +52,7 @@ module Admin
     def create_blob
       file = File.open params[:archive]
       result = ActiveStorage::Blob.create_and_upload! io: file,
-        filename: params[:archive].original_filename
+                                                      filename: params[:archive].original_filename
       file.close
       result.key
     end

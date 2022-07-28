@@ -10,6 +10,7 @@ class PasswordResetsController < ApplicationController
 
     if @user.present?
       @user.set_password_reset_token
+
       PasswordResetMailer.with(user: @user).reset_email.deliver_later
     end
 

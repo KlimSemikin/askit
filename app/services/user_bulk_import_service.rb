@@ -9,7 +9,7 @@ class UserBulkImportService < ApplicationService
   end
 
   def call
-    read_zip_entries do |entry|  # read zip
+    read_zip_entries do |entry| # read zip
       entry.get_input_stream do |f|  # read file
         User.import users_from(f.read), ignore: true
         f.close
@@ -47,7 +47,7 @@ class UserBulkImportService < ApplicationService
   def users_from(data)
     sheet = RubyXL::Parser.parse_buffer(data)[0]
     sheet.filter_map do |row|
-      next unless row.present?
+      next if row.blank?
 
       cells = row.cells[0..2].map { |c| c&.value.to_s }
       User.new name: cells[0],
