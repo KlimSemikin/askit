@@ -24,15 +24,23 @@ ru:
     models:
       question: Вопрос
   admin:
+    user_mailer:
+      bulk_export_done:
+        subject: "Экпорт пользователей завершён | AskIt"
+      bulk_import_done:
+        subject: "Импорт пользователей завершён | AskIt"
+      bulk_import_fail:
+        subject: "Импорт пользователей завершился с ошибкой | AskIt"
     users:
       create:
-        success: "Пользователи импортированы!"
+        success: "Вы получите электронное письмо, как только операция завершится"
       destroy:
         success: "Пользователь удалён!"
       edit:
         title: "Редактирование пользователя"
       index:
-        download_zipped: "Загрузить архив XLSX"
+        download_zipped: "Зарузить архив XLSX"
+        success: "Вы получите электронное письмо, как только операция завершится"
         title: "Управление пользователями"
         upload_form:
           select_archive: "Выберите архив"
