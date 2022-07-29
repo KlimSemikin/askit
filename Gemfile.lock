@@ -80,7 +80,7 @@ GEM
     bcrypt (3.1.18)
     bindex (0.8.1)
     blueprinter (0.25.3)
-    bootsnap (1.12.0)
+    bootsnap (1.13.0)
       msgpack (~> 1.2)
     bootstrap (5.2.0)
       autoprefixer-rails (>= 9.1.0)
@@ -125,7 +125,7 @@ GEM
       ruby2_keywords
     erubi (1.10.0)
     execjs (2.8.1)
-    faker (2.21.0)
+    faker (2.22.0)
       i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
     globalid (1.0.0)
