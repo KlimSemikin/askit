@@ -82,6 +82,8 @@ ru:
         admin: Админ
         basic: Базовый
         moderator: Модератор
+    errors:
+      invalid_format: имеет неправильный формат
   menu:
     edit_profile: "Изм. профиль"
     home: Главная
