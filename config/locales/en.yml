@@ -82,6 +82,8 @@ en:
         admin: Admin
         basic: Basic
         moderator: Moderator
+    errors:
+      invalid_format: has invalid format
   menu:
     edit_profile: "Edit profile"
     home: Home

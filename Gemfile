@@ -9,22 +9,15 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'rails', '~> 7.0.2', '>= 7.0.2.3'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem 'sprockets-rails'
+gem 'sprockets-rails', '~> 3.4'
+gem "jsbundling-rails", "~> 1.0"
+gem "cssbundling-rails", "~> 1.1"
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
-
-# Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem 'importmap-rails'
-
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem 'turbo-rails'
-
-# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem 'stimulus-rails'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem 'jbuilder'
@@ -46,7 +39,6 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'bootsnap', require: false
 
 # Use Bootstrap to use bootstrap css
-gem 'bootstrap', '~> 5.1'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -91,4 +83,4 @@ gem 'rails-i18n', '~> 7.0'
 gem 'rubyXL', '~> 3.4'
 gem 'rubyzip'
 gem 'sidekiq', '~> 6.5'
-gem 'valid_email2', '~> 4.0'
+gem "http_accept_language", "~> 2.1"

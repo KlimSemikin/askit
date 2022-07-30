@@ -5,6 +5,7 @@ class User < ApplicationRecord
   include Rememberable
 
   enum role: { basic: 0, moderator: 1, admin: 2 }, _suffix: :role
+
   attr_accessor :old_password, :skip_old_password
 
   has_secure_password validations: false
@@ -19,7 +20,7 @@ class User < ApplicationRecord
   validate :password_presence, :password_complexity
   validate :new_password_not_old, on: :update, if: -> { !skip_old_password }
 
-  validates :email, presence: true, uniqueness: true, 'valid_email_2/email': true
+  validates :email, presence: true, uniqueness: true, email: true
   validates :role, presence: true
 
   before_save :set_gravatar_hash, if: :email_changed?
