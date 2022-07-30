@@ -71,6 +71,8 @@ en:
       submit: Submit!
     dialog:
       you_sure: "Are you sure?"
+    errors:
+      invalid_format: "has invalid format"
     flash:
       already_signed_in: "You are already signed in!"
       not_authorized: "You are not authorized to perform this action!"
@@ -82,8 +84,6 @@ en:
         admin: Admin
         basic: Basic
         moderator: Moderator
-    errors:
-      invalid_format: has invalid format
   menu:
     edit_profile: "Edit profile"
     home: Home

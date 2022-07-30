@@ -15,7 +15,7 @@
 #   Question.create(title:, body:, user:)
 # end
 #
-# 30.times do
+# 100.times do
 #   question = Question.all.sample
 #   body = Faker::Lorem.paragraph(sentence_count: 5, supplemental: true, random_sentences_to_add: 4)
 #   user = User.all.sample
@@ -26,12 +26,20 @@
 #   title = Faker::Hipster.word
 #   Tag.create title:
 # end
-
-5.times do
-  email = Faker::Internet.email
-  name = Faker::Name.name
-  password = 'Bbe31kchuw!'
-  role = 'basic'
-
-  User.create(email:, name:, password:, role:)
-end
+#
+# 5.times do
+#   email = Faker::Internet.email
+#   name = Faker::Name.name
+#   password = 'Bbe31kchuw!'
+#   role = 'basic'
+#
+#   User.create(email:, name:, password:, role:)
+# end
+#
+# 30.times do
+#   question = Question.all.sample
+#   tags = Tag.ids.sample([1,2,4].sample)
+#
+#   question.tag_ids = tags
+#   question.save
+# end

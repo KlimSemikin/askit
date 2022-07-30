@@ -8,27 +8,47 @@ class QuestionsController < ApplicationController
   before_action :authorize_question!
   after_action :verify_authorized
 
+  # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
   def create
     @question = current_user.questions.build question_params
     if @question.save
-      flash[:success] = t('.success')
-      redirect_to questions_path
+      respond_to do |format|
+        format.html do
+          flash[:success] = t('.success')
+          redirect_to questions_path
+        end
+
+        format.turbo_stream do
+          @question = @question.decorate
+          flash.now[:success] = t('.success')
+        end
+      end
     else
-      render :new, status: :unprocessable_entity
+      render :new
     end
   end
+  # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
 
   def destroy
     @question.destroy
-    flash[:success] = t('.success')
-    redirect_to questions_path, status: :see_other
+
+    respond_to do |format|
+      format.html do
+        flash[:success] = t('.success')
+        redirect_to questions_path, status: :see_other
+      end
+
+      format.turbo_stream do
+        flash.now[:success] = t('.success')
+      end
+    end
   end
 
   def edit; end
 
   def index
     @tags = Tag.where(id: params[:tag_ids]) if params[:tag_ids]
-    @pagy, @questions = pagy Question.all_by_tags(params[:tag_ids])
+    @pagy, @questions = pagy Question.all_by_tags(params[:tag_ids]), link_extra: 'data-turbo-frame="pagination"'
     @questions = @questions.decorate
   end
 
@@ -40,14 +60,25 @@ class QuestionsController < ApplicationController
     load_question_answers
   end
 
+  # rubocop:disable Metrics/MethodLength
   def update
     if @question.update question_params
-      flash[:success] = t('.success')
-      redirect_to questions_path
+      respond_to do |format|
+        format.html do
+          flash[:success] = t('.success')
+          redirect_to questions_path
+        end
+
+        format.turbo_stream do
+          @question = @question.decorate
+          flash.now[:success] = t('.success')
+        end
+      end
     else
       render :edit, status: :unprocessable_entity
     end
   end
+  # rubocop:enable Metrics/MethodLength
 
   private
 
