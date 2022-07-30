@@ -1,15 +1,5 @@
-import 'tom-select'
-
-const Translations = {
-  "ru": {
-    "remove_button": "Удалить элемент",
-    "no_results": "Ничего не нашлось"
-  },
-  "en": {
-    "remove_button": "Remove element",
-    "no_results": "No results"
-  }
-}
+import TomSelect from 'tom-select'
+import Translations from './i18n/select.json'
 
 document.addEventListener("turbo:load", function () {
   const i18n = Translations[document.querySelector('body').dataset.lang]
