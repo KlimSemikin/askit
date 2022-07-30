@@ -1,0 +1,55 @@
+.field_with_errors {
+  .form-control {
+    border-color: #ea7777;
+  }
+  label {
+    color: #da2222;
+  }
+}
+
+.flag {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url('flags.png') no-repeat;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-align: left;
+}
+
+.ru-flag {
+  background-position: -1px -0px;
+
+}
+
+.en-flag {
+  background-position: -1px -17px;
+}
+
+.nav {
+  .flag {
+    position: relative;
+    top: 2px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 100%;
+  text-decoration: underline;
+}
+
+.button_to {
+  display: inline;
+}
