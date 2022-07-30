@@ -1,11 +1,11 @@
 <% provide :page_title, t('.title') %>
 <% currently_at t('menu.questions') %>
 
-<h2 class="mb-4"><%= t('.title') %></h2>
+<h1 class="mb-4"><%= t('.title') %></h1>
 
 <section class="mb-5">
   <%= form_with url: questions_path, method: :get do |f| %>
-    <h3><%= f.label :tag_ids, t('.search_by_tags_form.title') %></h3>
+    <h2><%= f.label :tag_ids, t('.search_by_tags_form.title') %></h2>
 
     <div class="mb-3">
       <%= f.collection_select :tag_ids, (@tags || []), :id, :title,

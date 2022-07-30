@@ -1,7 +1,7 @@
 <% provide :page_title, @question.title %>
 <% currently_at t('menu.questions') %>
 
-<h2 class="mb-4"><%= @question.title %></h2>
+<h1 class="mb-4"><%= @question.title %></h1>
 
 <time datetime="<% @question.formatted_created_at %>">
   <%= @question.formatted_created_at %>
@@ -36,7 +36,7 @@
 
 <%= render 'answers/form' %>
 
-<h3 class="mt-5 mb-3"><%= t('.answers') %></h3>
+<h2 class="mt-5 mb-3"><%= t('.answers') %></h2>
 
 <%= pagination @pagy %>
 
