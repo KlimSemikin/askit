@@ -11,7 +11,7 @@ gem 'rails', '~> 7.0.2', '>= 7.0.2.3'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'cssbundling-rails', '~> 1.1'
 gem 'jsbundling-rails', '~> 1.0'
-gem 'sprockets-rails', '~> 3.4'
+gem "propshaft", "~> 0.6"
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
