@@ -8,6 +8,7 @@ class QuestionsController < ApplicationController
   before_action :authorize_question!
   after_action :verify_authorized
 
+  # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
   def create
     @question = current_user.questions.build question_params
     if @question.save
@@ -26,6 +27,7 @@ class QuestionsController < ApplicationController
       render :new
     end
   end
+  # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
 
   def destroy
     @question.destroy
@@ -58,6 +60,7 @@ class QuestionsController < ApplicationController
     load_question_answers
   end
 
+  # rubocop:disable Metrics/MethodLength
   def update
     if @question.update question_params
       respond_to do |format|
@@ -75,6 +78,7 @@ class QuestionsController < ApplicationController
       render :edit, status: :unprocessable_entity
     end
   end
+  # rubocop:enable Metrics/MethodLength
 
   private
 
