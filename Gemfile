@@ -9,9 +9,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'rails', '~> 7.0.2', '>= 7.0.2.3'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
+gem 'cssbundling-rails', '~> 1.1'
+gem 'jsbundling-rails', '~> 1.0'
 gem 'sprockets-rails', '~> 3.4'
-gem "jsbundling-rails", "~> 1.0"
-gem "cssbundling-rails", "~> 1.1"
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
@@ -77,10 +77,10 @@ gem 'activerecord-import', '~> 1.2'
 gem 'caxlsx', '~> 3.2'
 gem 'caxlsx_rails', '~> 0.6'
 gem 'draper', '~> 4.0'
+gem 'http_accept_language', '~> 2.1'
 gem 'pagy', '~> 5.10'
 gem 'pundit', '~> 2.2'
 gem 'rails-i18n', '~> 7.0'
 gem 'rubyXL', '~> 3.4'
 gem 'rubyzip'
 gem 'sidekiq', '~> 6.5'
-gem "http_accept_language", "~> 2.1"
