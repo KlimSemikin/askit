@@ -29,8 +29,17 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    flash[:success] = t('.success')
-    redirect_to questions_path, status: :see_other
+
+    respond_to do |format|
+      format.html do
+        flash[:success] = t('.success')
+        redirect_to questions_path, status: :see_other
+      end
+
+      format.turbo_stream do
+        flash.now[:success] = t('.success')
+      end
+    end
   end
 
   def edit; end
