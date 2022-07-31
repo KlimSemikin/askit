@@ -12,8 +12,17 @@ class AnswersController < ApplicationController
   def create
     @answer = @question.answers.build answer_create_params
     if @answer.save
-      flash[:success] = t('.success')
-      redirect_to question_path(@question)
+      respond_to do |format|
+        format.html do
+          flash[:success] = t('.success')
+          redirect_to question_path(@question)
+        end
+
+        format.turbo_stream do
+          @answer = @answer.decorate
+          flash.now[:success] = t('.success')
+        end
+      end
     else
       load_question_answers do_render: true, status: :unprocessable_entity
     end
