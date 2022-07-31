@@ -16,7 +16,9 @@
 
 <%= pagination @pagy %>
 
-<%= render partial: 'answers/answer', collection: @answers,
-  as: :answer, locals: {question: @question} %>
+<%= turbo_frame_tag 'answers' do %>
+  <%= render partial: 'answers/answer', collection: @answers,
+    as: :answer, locals: {question: @question} %>
+<% end %>
 
 <%= pagination @pagy %>
