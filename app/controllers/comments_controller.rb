@@ -9,12 +9,20 @@ class CommentsController < ApplicationController
   def create
     @comment = @commentable.comments.build comment_params
     authorize @comment
+    @comment = @comment.decorate
 
     if @comment.save
-      flash[:success] = t('.success')
-      redirect_to question_path(@question)
+      respond_to do |format|
+        format.html do
+          flash[:success] = t('.success')
+          redirect_to question_path(@question)
+        end
+
+        format.turbo_stream do
+          flash.now[:success] = t('.success')
+        end
+      end
     else
-      @comment = @comment.decorate
       load_question_answers do_render: true, status: :unprocessable_entity
     end
   end
