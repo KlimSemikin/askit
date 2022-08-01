@@ -5,8 +5,7 @@
   <%= render @question %>
 </article>
 
-<%= render 'comments/commentable', commentable: @question, comment: @comment,
-  html_id: 'questionComments' %>
+<%= render 'comments/commentable', commentable: @question, comment: @comment %>
 
 <h2 class="my-3"><%= t('.write_answer') %></h2>
 
